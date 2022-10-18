@@ -13,9 +13,6 @@ class Solution(object):
         memo = {0:nums[0],1: max(nums[:2])}
         for i in range(2,n):
             memo[i] = max(memo[i-1],nums[i]+memo[i-2])
-            print(i)
-            print(memo)
-       
         return memo[n-1]
             
             
