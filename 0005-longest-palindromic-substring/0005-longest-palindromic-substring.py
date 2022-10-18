@@ -1,12 +1,5 @@
 class Solution(object):
     def longestPalindrome(self, s):
-        """
-        :type s: str
-        :rtype: str
-        "bbcbb"
-        ""aacabdkacaa""
-            
-        """
         n = len(s)
         max_substring = s[0]
         if n <=1:
