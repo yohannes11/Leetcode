@@ -11,8 +11,7 @@ class Solution(object):
         max_substring = s[0]
         if n <=1:
             return s[0]
-        
-        
+         
         for i in range(len(s)):
             left_pointer = i-1
             right_pointer = i+1
