@@ -10,13 +10,15 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
-        memo = {}
-        memo[0] , memo[1] = 1, 1
-        def dp(i):
-            if i in memo:
-                return memo[i]
-            else:
-                memo[i] = dp(i-2)+ dp(i-1)
-                return memo[i]
-        return dp(n)
+        prev, current = 1, 2
+        if n <= 2: 
+            return n
+        else:
+            for n in range(3, n+1):
+                temp = prev+current
+                prev = current
+                current = temp
+        return current
+            
+            
         
