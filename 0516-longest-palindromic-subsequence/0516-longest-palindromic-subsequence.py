@@ -13,12 +13,10 @@ class Solution(object):
             if s[i] == s[j]:
                 if i+1 == j:
                     memo[(i,j)] = 2
-                    return memo[(i,j)]
                 else:
                     memo[(i,j)] = 2+dp(i+1,j-1)
-                    return memo[(i,j)]
             else:
                 memo[(i,j)] = max(dp(i,j-1),dp(i+1,j))
-                return memo[(i,j)]
+            return memo[(i,j)]
         
         return dp(0,len(s)-1)
