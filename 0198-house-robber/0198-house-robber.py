@@ -1,12 +1,5 @@
 class Solution(object):
     def rob(self, nums):
-        """
-        [2,1,1,2]
-               
-                  
-        :type nums: List[int]
-        :rtype: int
-        """
         n = len(nums)
         if n <=2:
             return max(nums)
