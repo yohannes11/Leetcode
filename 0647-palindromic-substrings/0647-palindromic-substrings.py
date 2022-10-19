@@ -16,12 +16,13 @@ class Solution(object):
                     if (i+1,j-1) not in memo:
                         memo[(i+1,j-1)] = dp(i+1,j-1)
                     if memo[(i+1,j-1)] and s[i+1] == s[j-1]:
-                        return True
+                        memo[(i,j)] = True
                     else:
-                        return False
+                        memo[(i,j)] = False
 
                 else:
-                    return False
+                    memo[(i,j)] = False
+                return memo[(i,j)]
 
         for i in range(len(s)):
             for j in range(i,len(s)):
