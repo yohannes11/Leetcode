@@ -5,7 +5,6 @@ class Solution(object):
         self.res = 0
         
         def dfs(i):
-            print()
             if i in dp:
                 return dp[i]
             if s[i] == '0':
