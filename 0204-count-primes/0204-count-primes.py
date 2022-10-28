@@ -1,13 +1,17 @@
 class Solution:
     def countPrimes(self, n: int) -> int:
-        if n < 3:
+        if n < 2:
             return 0
-        primes = [True] * n
-        primes[0] = primes[1] = False
-        for i in range(2, int(n ** 0.5) + 1):
+        
+        primes = [True]*(n)  
+        for i in range(2,math.isqrt(n)+1):
+            multiplier = 2
             if primes[i]:
-                primes[i * i: n: i] = [False] * len(primes[i * i: n: i])
-        return sum(primes)
+                j = i
+                while j*i < n:
+                    primes[j * i] = False
+                    j+=1
+        return sum(primes) - 2
                 
             
             
