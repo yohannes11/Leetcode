@@ -5,7 +5,6 @@ class Solution:
         
         primes = [True]*(n)  
         for i in range(2,math.isqrt(n)+1):
-            multiplier = 2
             if primes[i]:
                 j = i
                 while j*i < n:
