@@ -1,9 +1,7 @@
 class Solution:
     def isPalindrome(self, s: str) -> bool:
-        output_str = [s[i].lower() for i in range(len(s)) if s[i].isalnum()]
-        output_str = ''.join(output_str)
-        left_ptr, right_ptr = 0, len(output_str) - 1
-        
+        output_str = ''.join([s[i].lower() for i in range(len(s)) if s[i].isalnum()])
+        left_ptr, right_ptr = 0, len(output_str) - 1  
         while left_ptr<= right_ptr:
             if output_str[left_ptr]!=output_str[right_ptr]:return False
             left_ptr+=1
