@@ -17,5 +17,4 @@ class Solution:
             
         output_array = inorder_traversal(root,[])
         return output_array[k-1]
-        
             
