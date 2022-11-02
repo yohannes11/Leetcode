@@ -13,8 +13,6 @@ class Solution:
             q = temp
         if root is None:
             return None
-        print(p)
-        print(q)
         if root.val > p.val and root.val < q.val:
             return root
         if root.val > p.val and root.val >q.val:
